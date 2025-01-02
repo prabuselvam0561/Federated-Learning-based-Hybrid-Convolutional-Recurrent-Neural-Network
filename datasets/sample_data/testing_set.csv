@@ -1,0 +1,5 @@
+protocol_type,packet_count,duration,latency,label
+TCP,120,1.5,0.5,Normal
+UDP,200,2.0,0.7,DDoS_TCP
+HTTP,150,1.0,0.4,SQL_Injection
+ICMP,300,2.5,0.9,MITM
