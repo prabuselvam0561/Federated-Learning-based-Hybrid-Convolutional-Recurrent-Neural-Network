@@ -1,15 +1,8 @@
-data_preprocessing_content = """
 import pandas as pd
 import numpy as np
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
 
 def preprocess_data(file_path):
-    \"\"\"
-    Preprocesses the IoT dataset by handling missing values, normalizing numerical features,
-    and encoding categorical variables.
-    :param file_path: Path to the dataset file (CSV format).
-    :return: Processed dataset as a Pandas DataFrame.
-    \"\"\"
     # Load dataset
     data = pd.read_csv(file_path)
     
@@ -37,16 +30,3 @@ if __name__ == '__main__':
     dataset_path = 'content/data/sample_data/training_set.csv'
     processed_data = preprocess_data(dataset_path)
     print(f"Processed data shape: {processed_data.shape}")
-"""
-
-# Save the content to a new path
-file_path_updated = "content/data/data_preprocessing.py"
-
-# Ensure the directory exists before saving
-import os
-os.makedirs("content/data", exist_ok=True)
-
-with open(file_path_updated, "w") as file:
-    file.write(data_preprocessing_content)
-
-file_path_updated
