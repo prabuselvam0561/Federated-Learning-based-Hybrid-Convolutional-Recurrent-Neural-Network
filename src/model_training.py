@@ -1,4 +1,3 @@
-model_training_content = """
 import tensorflow as tf
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Conv1D, LSTM, Flatten
@@ -6,11 +5,6 @@ from tensorflow.keras.optimizers import Adam
 from sklearn.model_selection import train_test_split
 
 def build_model(input_shape):
-    \"\"\"
-    Builds the hybrid CRNN model for intrusion detection.
-    :param input_shape: Shape of the input data.
-    :return: Compiled CRNN model.
-    \"\"\"
     model = Sequential([
         Conv1D(filters=32, kernel_size=3, activation='relu', input_shape=input_shape),
         Conv1D(filters=64, kernel_size=3, activation='relu'),
@@ -26,12 +20,6 @@ def build_model(input_shape):
     return model
 
 def train_model(data, labels):
-    \"\"\"
-    Trains the CRNN model on the given dataset.
-    :param data: Input data.
-    :param labels: Corresponding labels.
-    :return: Trained CRNN model.
-    \"\"\"
     X_train, X_test, y_train, y_test = train_test_split(data, labels, test_size=0.2, random_state=42)
     input_shape = (X_train.shape[1], X_train.shape[2])
     model = build_model(input_shape)
@@ -49,13 +37,3 @@ if __name__ == '__main__':
     
     trained_model = train_model(data, labels)
     print("Model training complete.")
-"""
-
-# Save the content to a new file
-model_training_file_path = "/content/data/model_training.py"
-
-# Write to file
-with open(model_training_file_path, "w") as file:
-    file.write(model_training_content)
-
-model_training_file_path
