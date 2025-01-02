@@ -168,39 +168,11 @@ Detailed documentation is available in the `docs/` folder:
 
 ---
 
-## Contributing
-
-We welcome contributions! Please read our [CONTRIBUTING.md](CONTRIBUTING.md) file for guidelines.
-
----
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
 ## Acknowledgments
 
 - Authors of the research paper.
 - Community contributors.
 - Research institutions supporting IoT cybersecurity.
-
----
-
-## Citation
-
-If you use this code, please cite the associated research paper:
-
-```
-@article{example2025,
-  title={Federated Learning-based Hybrid Convolutional Recurrent Neural Network for Multi-Class Intrusion Detection in IoT Networks},
-  author={Prabu Selvam et al.},
-  journal={Journal Name},
-  year={2025},
-  doi={10.xxxx/xxxxx}
-}
-```
 
 ---
 
